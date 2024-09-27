@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="WIN-EKRA15JR0E7.S24_EXAM_DWH"
+  DTS:DTSID="{99E98D05-A0F3-4445-9C09-BFB41D32EFAA}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=WIN-EKRA15JR0E7;Initial Catalog=S24_EXAM_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{99E98D05-A0F3-4445-9C09-BFB41D32EFAA}WIN-EKRA15JR0E7.S24_EXAM_DWH;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

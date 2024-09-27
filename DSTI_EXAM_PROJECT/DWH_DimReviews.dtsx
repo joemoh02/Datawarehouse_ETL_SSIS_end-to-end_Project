@@ -1,0 +1,1855 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/27/2024 3:20:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WIN-EKRA15JR0E7"
+  DTS:CreatorName="WIN-EKRA15JR0E7\Administrator"
+  DTS:DTSID="{E23848F3-6B7B-4B7F-9921-29CD1CF7D9E3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{4BECEFC6-8D5E-448A-9174-A145F84AC48C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - DimReviews"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2BE6FF35-18E9-4C7F-B1B3-EB80940828B8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - DimReviews"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - DimReviews\ALL - Dates"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="ALL - Dates"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[review_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="review_id"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[order_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="order_id"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[order_id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[order_id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[review_comment_title]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="review_comment_title"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_title]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_title]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[review_comment_message]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="review_comment_message"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_message]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_message]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[review_score]"
+                      cachedDataType="i8"
+                      cachedName="review_score"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_score]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_score]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[review_creation_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="review_creation_date"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[review_creation_date_date]"
+                      cachedDataType="dbDate"
+                      cachedName="review_creation_date_date"
+                      lineageId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output].Columns[review_creation_date_date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date_date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      lineageId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Match Output].Columns[DateKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[DateKey]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[review_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="review_id"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[order_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="order_id"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[order_id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[order_id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[review_comment_title]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="review_comment_title"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_title]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_title]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[review_comment_message]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="review_comment_message"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_message]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_message]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[review_score]"
+                      cachedDataType="i8"
+                      cachedName="review_score"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_score]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_score]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[review_creation_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="review_creation_date"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[review_creation_date_date]"
+                      cachedDataType="dbDate"
+                      cachedName="review_creation_date_date"
+                      lineageId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output].Columns[review_creation_date_date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date_date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      lineageId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Output].Columns[DateKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[DateKey]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_id]"
+                      name="review_id" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[order_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[order_id]"
+                      name="order_id" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_title]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_title]"
+                      name="review_comment_title" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_message]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_message]"
+                      name="review_comment_message" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_score]"
+                      dataType="i8"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_score]"
+                      name="review_score" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date]"
+                      name="review_creation_date" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date_date]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_creation_date_date]"
+                      name="review_creation_date_date" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[DateKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[DateKey]"
+                      name="DateKey" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\DCNV - review date to date"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - review date to date"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\DCNV - review date to date.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\DCNV - review date to date.Inputs[Data Conversion Input].Columns[review_creation_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="review_creation_date"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT - DimReviews\DCNV - review date to date.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output].Columns[review_creation_date_date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output].Columns[review_creation_date_date]"
+                      name="review_creation_date_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT - DimReviews\DCNV - review date to date.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\DER - Date Key problem"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Date Key problem"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\DER - Date Key problem.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\DER - Date Key problem.Inputs[Derived Column Input].Columns[review_creation_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="review_creation_date"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - DimReviews\DER - Date Key problem.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[Rejects_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[Rejects_Date]"
+                      name="Rejects_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectPackageAndTask]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="201"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectPackageAndTask]"
+                      name="RejectPackageAndTask"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,100)@[System::PackageName] + " " + (DT_WSTR,100)@[System::TaskName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,100)@[System::PackageName] + " " + (DT_WSTR,100)@[System::TaskName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectColumn]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectColumn]"
+                      name="RejectColumn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,50)"review_creation_date"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,50)"review_creation_date"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="72"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectDescription]"
+                      name="RejectDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"The date " + (DT_WSTR,30)#{Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]} + " cannot be processed from DimDate"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The date " + (DT_WSTR,30)review_creation_date + " cannot be processed from DimDate"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - DimReviews\DER - Date Key problem.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\DER - Insert datekey -1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Insert datekey -1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\DER - Insert datekey -1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - DimReviews\DER - Insert datekey -1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">-1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">-1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - DimReviews\DER - Insert datekey -1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\LKP - DimDate lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - DimDate lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[Date] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Day" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DaySuffix" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Weekday" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekDayName" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeekDayName_Short" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeekDayName_FirstLetter" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DOWInMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Month" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthName" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthName_Short" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthName_FirstLetter" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Quarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterName" dataType="DT_STR" length="6" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MMYYYY" dataType="DT_STR" length="6" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthYear" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IsWeekend" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output].Columns[review_creation_date_date]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DimReviews\LKP - DimDate lookup.Connections[OleDbConnection]"
+                  connectionManagerID="{99E98D05-A0F3-4445-9C09-BFB41D32EFAA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[WIN-EKRA15JR0E7.S24_EXAM_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\LKP - DimDate lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\LKP - DimDate lookup.Inputs[Lookup Input].Columns[review_creation_date_date]"
+                      cachedDataType="dbDate"
+                      cachedName="review_creation_date_date"
+                      lineageId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output].Columns[review_creation_date_date]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - DimReviews\LKP - DimDate lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Match Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Match Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DateKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - DimReviews\LKP - DimDate lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - DimReviews\LKP - DimDate lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\MLT - review creation date"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="MLT - review creation date">
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\MLT - review creation date.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\MLT - review creation date.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\DFT - DimReviews\MLT - review creation date.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\MLT - review creation date.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\DFT - DimReviews\MLT - review creation date.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\MLT - review creation date.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\DFT - DimReviews\MLT - review creation date.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - ADM Rejects"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Rejects]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Connections[OleDbConnection]"
+                  connectionManagerID="{395E36F7-E408-4499-9AAE-519215082E6B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[WIN-EKRA15JR0E7.S24_EXAM_ADM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].Columns[Rejects_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Rejects_Date"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[Rejects_Date]"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[Rejects_Date]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].Columns[RejectPackageAndTask]"
+                      cachedDataType="wstr"
+                      cachedLength="201"
+                      cachedName="RejectPackageAndTask"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectPackageAndTask]"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectPackageAndTask]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].Columns[RejectColumn]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="RejectColumn"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectColumn]"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectColumn]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].Columns[RejectDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="72"
+                      cachedName="RejectDescription"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectDescription]"
+                      lineageId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output].Columns[RejectDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[Rejects_Date]"
+                      dataType="dbTimeStamp"
+                      name="Rejects_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectPackageAndTask]"
+                      dataType="wstr"
+                      length="255"
+                      name="RejectPackageAndTask" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectColumn]"
+                      dataType="wstr"
+                      length="255"
+                      name="RejectColumn" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input].ExternalColumns[RejectDescription]"
+                      dataType="nText"
+                      name="RejectDescription" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - DWH DimReviews"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimReviews]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Connections[OleDbConnection]"
+                  connectionManagerID="{99E98D05-A0F3-4445-9C09-BFB41D32EFAA}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[WIN-EKRA15JR0E7.S24_EXAM_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].Columns[review_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="review_id"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_id]"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_id]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].Columns[order_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="order_id"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[order_id]"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[order_id]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].Columns[review_comment_title]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="review_comment_title"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_comment_title]"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_title]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].Columns[review_comment_message]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="review_comment_message"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_comment_message]"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_comment_message]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].Columns[review_score]"
+                      cachedDataType="i8"
+                      cachedName="review_score"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_score]"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[review_score]" />
+                    <inputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1].Columns[DateKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_key]"
+                      dataType="i4"
+                      name="review_key" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="review_id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[order_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_comment_title]"
+                      dataType="wstr"
+                      length="100"
+                      name="review_comment_title" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_comment_message]"
+                      dataType="wstr"
+                      length="255"
+                      name="review_comment_message" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input].ExternalColumns[review_score]"
+                      dataType="i8"
+                      name="review_score" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE_SRC - ODS OrderReviews"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[OrderReviews]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Connections[OleDbConnection]"
+                  connectionManagerID="{D182FD90-5E3B-444F-B53E-EA9548DA21C8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[WIN-EKRA15JR0E7.S24_EXAM_ODS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_id]"
+                      length="50"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_id]"
+                      name="review_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[order_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      length="50"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_comment_title]"
+                      length="100"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_title]"
+                      name="review_comment_title"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_message]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_comment_message]"
+                      length="255"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_comment_message]"
+                      name="review_comment_message"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_score]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_score]"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_score]"
+                      name="review_score"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_creation_date]"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].Columns[review_creation_date]"
+                      name="review_creation_date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="review_id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_comment_title]"
+                      dataType="wstr"
+                      length="100"
+                      name="review_comment_title" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_comment_message]"
+                      dataType="wstr"
+                      length="255"
+                      name="review_comment_message" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_score]"
+                      dataType="i8"
+                      name="review_score" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output].ExternalColumns[review_creation_date]"
+                      dataType="dbTimeStamp"
+                      name="review_creation_date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_id]"
+                      name="review_id" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      name="order_id" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_comment_title]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_comment_title]"
+                      name="review_comment_title" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_comment_message]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_comment_message]"
+                      name="review_comment_message" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_score]"
+                      dataType="i8"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_score]"
+                      name="review_score" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_creation_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[review_creation_date]"
+                      name="review_creation_date" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - DimReviews.Paths[Data Conversion Output]"
+              endId="Package\DFT - DimReviews\LKP - DimDate lookup.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - DimReviews\DCNV - review date to date.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[Derived Column Output]"
+              endId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DFT - DimReviews\DER - Insert datekey -1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[Derived Column Output1]"
+              endId="Package\DFT - DimReviews\OLE_DST - ADM Rejects.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT - DimReviews\DER - Date Key problem.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[Lookup Match Output]"
+              endId="Package\DFT - DimReviews\ALL - Dates.Inputs[Union All Input 1]"
+              name="Lookup Match Output"
+              startId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[Lookup No Match Output]"
+              endId="Package\DFT - DimReviews\MLT - review creation date.Inputs[Multicast Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\DFT - DimReviews\LKP - DimDate lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[Multicast Output 1]"
+              endId="Package\DFT - DimReviews\DER - Insert datekey -1.Inputs[Derived Column Input]"
+              name="Multicast Output 1"
+              startId="Package\DFT - DimReviews\MLT - review creation date.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[Multicast Output 2]"
+              endId="Package\DFT - DimReviews\DER - Date Key problem.Inputs[Derived Column Input]"
+              name="Multicast Output 2"
+              startId="Package\DFT - DimReviews\MLT - review creation date.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[OLE DB Source Output]"
+              endId="Package\DFT - DimReviews\DCNV - review date to date.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT - DimReviews.Paths[Union All Output 1]"
+              endId="Package\DFT - DimReviews\OLE_DST - DWH DimReviews.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\DFT - DimReviews\ALL - Dates.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Truncate Dimreviews"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EF742739-39A7-4AF3-91CA-65A8584C9CD9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Truncate Dimreviews"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{99E98D05-A0F3-4445-9C09-BFB41D32EFAA}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE DimReviews" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{632CAC86-62ED-4947-BB7E-A05BE27BA520}"
+      DTS:From="Package\SQL - Truncate Dimreviews"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - DimReviews" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT - DimReviews"
+          TopLeft="218,204" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\SQL - Truncate Dimreviews"
+          TopLeft="195,75" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="302.75,117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87"
+              Start="0,0"
+              End="0,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - DimReviews">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="236,42"
+          Id="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews"
+          TopLeft="159,91" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\DFT - DimReviews\LKP - DimDate lookup"
+          TopLeft="187,282" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\DFT - DimReviews\DCNV - review date to date"
+          TopLeft="168,196" />
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[OLE DB Source Output]"
+          TopLeft="275.5,133">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Data Conversion Output]"
+          TopLeft="277.5,238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="209,42"
+          Id="Package\DFT - DimReviews\MLT - review creation date"
+          TopLeft="428,240" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\DFT - DimReviews\OLE_DST - DWH DimReviews"
+          TopLeft="163,443" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\DFT - DimReviews\DER - Date Key problem"
+          TopLeft="669,292" />
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Lookup No Match Output]"
+          TopLeft="375,303">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="53,-42"
+              Start="0,0"
+              End="45.5,-42">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="22.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,0"
+                    Point2="26.5,0"
+                    Point3="26.5,-4" />
+                  <mssgle:LineSegment
+                    End="26.5,-38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.5,-38"
+                    Point2="26.5,-42"
+                    Point3="30.5,-42" />
+                  <mssgle:LineSegment
+                    End="45.5,-42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-29.30638671875,1,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="193,42"
+          Id="Package\DFT - DimReviews\DER - Insert datekey -1"
+          TopLeft="489,352" />
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Multicast Output 1]"
+          TopLeft="532.5,282">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="53,70"
+              Start="0,0"
+              End="53,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
+                  <mssgle:LineSegment
+                    End="49,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49,35"
+                    Point2="53,35"
+                    Point3="53,39" />
+                  <mssgle:LineSegment
+                    End="53,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Multicast Output 2]"
+          TopLeft="637,261">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="32,52"
+              Start="0,0"
+              End="24.5,52">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="12,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12,0"
+                    Point2="16,0"
+                    Point3="16,4" />
+                  <mssgle:LineSegment
+                    End="16,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16,48"
+                    Point2="16,52"
+                    Point3="20,52" />
+                  <mssgle:LineSegment
+                    End="24.5,52" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="137,42"
+          Id="Package\DFT - DimReviews\ALL - Dates"
+          TopLeft="209,357" />
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Lookup Match Output]"
+          TopLeft="279.25,324">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Derived Column Output]"
+          TopLeft="489,375.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-143,0"
+              Start="0,0"
+              End="-135.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-135.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Union All Output 1]"
+          TopLeft="277.5,399">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DFT - DimReviews\OLE_DST - ADM Rejects"
+          TopLeft="835,370" />
+        <EdgeLayout
+          Id="Package\DFT - DimReviews.Paths[Derived Column Output1]"
+          TopLeft="769,334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="167.5,36"
+              Start="0,0"
+              End="167.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="163.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="163.5,18"
+                    Point2="167.5,18"
+                    Point3="167.5,22" />
+                  <mssgle:LineSegment
+                    End="167.5,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DimReviews\OLE_SRC - ODS OrderReviews">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DimReviews\LKP - DimDate lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DimReviews\OLE_DST - DWH DimReviews">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DimReviews\OLE_DST - ADM Rejects">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

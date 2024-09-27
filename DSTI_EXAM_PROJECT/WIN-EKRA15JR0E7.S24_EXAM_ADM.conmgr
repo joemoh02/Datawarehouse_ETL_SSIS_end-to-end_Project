@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="WIN-EKRA15JR0E7.S24_EXAM_ADM"
+  DTS:DTSID="{395E36F7-E408-4499-9AAE-519215082E6B}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=WIN-EKRA15JR0E7;Initial Catalog=S24_EXAM_ADM;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ODS_OrderPayments-{395E36F7-E408-4499-9AAE-519215082E6B}WIN-EKRA15JR0E7.S24_EXAM_ADM;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
