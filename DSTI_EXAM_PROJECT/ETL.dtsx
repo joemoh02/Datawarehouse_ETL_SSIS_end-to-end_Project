@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{4CBDDB0C-1DA8-4A52-A945-143B7D38C529}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{D880DAD3-F8AA-4666-A4AB-EE1D65A87FDE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -508,7 +508,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{0FE8F631-7AF9-4042-A1CE-285F91E2017D}"
+      DTS:DTSID="{16B28CA7-7F2C-486B-8A0D-055A62EF3482}"
       DTS:From="Package\SEQC - STA"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -535,99 +535,9 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168,42"
-          Id="Package\SEQC - STA\EPT - STA Orders"
-          TopLeft="48,27" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\SEQC - STA\EPT - STA OrderItems"
-          TopLeft="52,95" />
-        <NodeLayout
-          Size="211,42"
-          Id="Package\SEQC - STA\EPT - STA OrderPayments"
-          TopLeft="59,161" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\SEQC - STA\EPT - STA OrdersReviews"
-          TopLeft="59,223" />
-        <NodeLayout
-          Size="187,42"
-          Id="Package\SEQC - STA\EPT - STA Customers"
-          TopLeft="67,286" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\SEQC - STA\EPT - STA Sellers"
-          TopLeft="75,344" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\SEQC - STA\EPT - STA Products"
-          TopLeft="75,404" />
-        <NodeLayout
-          Size="223,42"
-          Id="Package\SEQC - STA\EPT - STA Product_Category"
-          TopLeft="62,463" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\SEQC - STA\EPT - STA Geolocation"
-          TopLeft="72,533" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="302,596"
-          Size="302,639"
-          Id="Package\SEQC - STA"
-          TopLeft="47,140" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\SEQC - ODS\EPT - ODS Orders"
-          TopLeft="75,25" />
-        <NodeLayout
-          Size="197,42"
-          Id="Package\SEQC - ODS\EPT - ODS OrdersItems"
-          TopLeft="78,80" />
-        <NodeLayout
-          Size="214,42"
-          Id="Package\SEQC - ODS\EPT - ODS OrderPayments"
-          TopLeft="74,137" />
-        <NodeLayout
-          Size="206,42"
-          Id="Package\SEQC - ODS\EPT - ODS OrderReviews"
-          TopLeft="75,200" />
-        <NodeLayout
-          Size="190,42"
-          Id="Package\SEQC - ODS\EPT - ODS Customers"
-          TopLeft="74,267" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\SEQC - ODS\EPT - ODS Sellers"
-          TopLeft="84,323" />
-        <NodeLayout
-          Size="180,42"
-          Id="Package\SEQC - ODS\EPT - ODS Products"
-          TopLeft="84,385" />
-        <NodeLayout
-          Size="219,42"
-          Id="Package\SEQC - ODS\EPT - ODS ProductCategory"
-          TopLeft="87,449" />
-        <NodeLayout
-          Size="195,42"
-          Id="Package\SEQC - ODS\EPT - ODS Geolocation"
-          TopLeft="74,514" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="340,588"
-          Size="340,631"
-          Id="Package\SEQC - ODS"
-          TopLeft="406,138" />
-        <NodeLayout
           Size="212,42"
           Id="Package\SEQC - DWH\EPT - DWH DimCustomers"
           TopLeft="75.5,83" />
-        <NodeLayout
-          Size="192,42"
-          Id="Package\SEQC - DWH\EPT - DWH DimSellers"
-          TopLeft="84.5,138" />
         <NodeLayout
           Size="218,42"
           Id="Package\SEQC - DWH\EPT - DWH DimGeolocation"
@@ -640,6 +550,10 @@
           Size="200,42"
           Id="Package\SEQC - DWH\EPT - DWH DimReviews"
           TopLeft="82.5,266" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\SEQC - DWH\EPT - DWH DimSellers"
+          TopLeft="84.5,138" />
         <NodeLayout
           Size="206,42"
           Id="Package\SEQC - DWH\EPT - DWH FactOrders_3"
@@ -797,28 +711,92 @@
           Size="339,470"
           Id="Package\SEQC - DWH"
           TopLeft="804,137" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="349,456.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="57,0"
-              Start="0,0"
-              End="49.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="49.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="190,42"
+          Id="Package\SEQC - ODS\EPT - ODS Customers"
+          TopLeft="74,267" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\SEQC - ODS\EPT - ODS Geolocation"
+          TopLeft="74,514" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\SEQC - ODS\EPT - ODS OrderPayments"
+          TopLeft="74,137" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\SEQC - ODS\EPT - ODS OrderReviews"
+          TopLeft="75,200" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\SEQC - ODS\EPT - ODS Orders"
+          TopLeft="75,25" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\SEQC - ODS\EPT - ODS OrdersItems"
+          TopLeft="78,80" />
+        <NodeLayout
+          Size="219,42"
+          Id="Package\SEQC - ODS\EPT - ODS ProductCategory"
+          TopLeft="87,449" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\SEQC - ODS\EPT - ODS Products"
+          TopLeft="84,385" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\SEQC - ODS\EPT - ODS Sellers"
+          TopLeft="84,323" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="340,588"
+          Size="340,631"
+          Id="Package\SEQC - ODS"
+          TopLeft="406,138" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\SEQC - STA\EPT - STA Customers"
+          TopLeft="67,286" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SEQC - STA\EPT - STA Geolocation"
+          TopLeft="72,524" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\SEQC - STA\EPT - STA OrderItems"
+          TopLeft="52,95" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\SEQC - STA\EPT - STA OrderPayments"
+          TopLeft="59,161" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\SEQC - STA\EPT - STA Orders"
+          TopLeft="48,27" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\SEQC - STA\EPT - STA OrdersReviews"
+          TopLeft="59,223" />
+        <NodeLayout
+          Size="223,42"
+          Id="Package\SEQC - STA\EPT - STA Product_Category"
+          TopLeft="62,463" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\SEQC - STA\EPT - STA Products"
+          TopLeft="75,404" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\SEQC - STA\EPT - STA Sellers"
+          TopLeft="75,344" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="302,621"
+          Size="302,664"
+          Id="Package\SEQC - STA"
+          TopLeft="47,140" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="746,453.5">
@@ -845,6 +823,40 @@
                     Point3="31,-81.5" />
                   <mssgle:LineSegment
                     End="50.5,-81.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="349,472">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="57,-18.5"
+              Start="0,0"
+              End="49.5,-18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="24.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.5,0"
+                    Point2="28.5,0"
+                    Point3="28.5,-4" />
+                  <mssgle:LineSegment
+                    End="28.5,-14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.5,-14.5"
+                    Point2="28.5,-18.5"
+                    Point3="32.5,-18.5" />
+                  <mssgle:LineSegment
+                    End="49.5,-18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
