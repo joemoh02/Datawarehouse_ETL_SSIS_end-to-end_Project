@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">WIN-EKRA15JR0E7</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAABvNWT/Mot0CwK1VCxXioJAAAAAACAAAAAAAQZgAAAAEAACAAAACh27gIGD7FBshJV00sMYq3DhTzS5eXd0kx107rl0dgrQAAAAAOgAAAAAIAACAAAABpwUrokm+Gah/tt30XJDZPcy2O7Go+089Z1Tv3nV0YYJAAAABgFI1KSr3G2UtNTddydj0H6uHVkn0C0i5nFSzrkKZXfraPo7lD23PPNBR8KB+V5XcMynOkxaaSWrx1XnTZZ517l+gubdNNWlaKnatesaSO1BXJLWb+dEvsbi38FwrYxE/X7ucW7QZabIdaDEBmbYre1ouVw7MUe61TE2WwDDxyOxV2wwnGqDTw8NcbDKGmEjxAAAAAoZpZMO5MQ63YdBMSuCskRTseM5gnCISkbgRsMISic9EqZ13dS8ecu7QQBThsdPeJhQNRFqsegMNHvT2mCAFeKw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAABvNWT/Mot0CwK1VCxXioJAAAAAACAAAAAAAQZgAAAAEAACAAAAACSKRL3DSMpDM9DQgvg2dGnmU83+siVg9IHPNFIka5PQAAAAAOgAAAAAIAACAAAAAUeEswdFM7flnGTAKCI6NfTKRPg3mB9dI3d96qII/ozpAAAAD1nIIvbxLeinOjW/MggQ+tZhMk6iu/21xuPZTW2MKbwWbr45wbnKs5qXWMpZVKzJgNLgDLPQUChjqhqkF5rX1WHcjFIWpRU29B/Go8KYmPqpvr9enXd9QVuA0n/9MmeES41dFSbLMv6HSuYVOeyY4ctHvcOUdCkBJoSlTWoNpiV51CTQ4JA09aEvZIiyvf2ghAAAAAR4WAJ2ZAXk2IwMU0IgRPYXdY9Lcud7XV2z9DfwDG1HgtuVSinMencHDo3ic+uiuoHd0gC25mssmLABMoVievYQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -58,6 +58,10 @@
           <SSIS:Package SSIS:Name="DWH - FactOrders 2_new_idea.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - FactOrders 3.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="ETL.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH_DimProducts 1.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH - FactOrders 1.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH - FactOrders 2.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH - FactOrders 4.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="WIN-EKRA15JR0E7.S24_EXAM_STA.conmgr" />
@@ -824,8 +828,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2293,10 +2295,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">16</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">19</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{CFB2F07F-889C-46DE-9F04-D3F74F990EC1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CFD6E549-195E-4DCB-B9F3-31964C98E958}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3750,10 +3752,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH - FactOrders 3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">59</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">63</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{735C1461-22EA-4361-975B-12677C522694}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{1A7A8B50-9D16-4FFE-9483-EF5FD16B7BD9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3767,10 +3769,78 @@
                 <SSIS:Property SSIS:Name="Name">ETL</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{99B68F90-C6DF-4BD0-814E-763EAB115D2B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C0E36E37-E20C-4142-8CC1-75C4B180CA29}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH_DimProducts 1.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{B4DB81A6-961D-4BB5-A064-D227B449669E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH_DimProducts</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{20405640-45E1-433F-A8EE-060AEC170A1B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH - FactOrders 1.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{26205079-9260-4C95-BC33-E3D61F3CC2D1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH - FactOrders 3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">59</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{645D2465-21A0-4A96-B332-5C031965A313}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH - FactOrders 2.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{3AA4130F-23D9-4D3B-8FC8-14E3F673BE90}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH - FactOrders 3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">59</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{AE32501B-A80D-4C83-BA42-61646D9CC0D6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH - FactOrders 4.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{85C2A647-BB45-4647-8213-386F89105FCB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH - FactOrders 3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">59</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{899E8591-40F8-4473-8D81-BE840BCBECF3}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="STA_Orders"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{CCD0E7BC-938B-4232-A5EE-943C658F92F0}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{75E58937-0484-4C68-9A8B-9B5E9CB5943E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -760,10 +760,6 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42"
-          Id="Package\SQL - Truncate Table"
-          TopLeft="236,67" />
-        <NodeLayout
           Size="168,42"
           Id="Package\FELC - STA Orders Files\DFT - STA Orders"
           TopLeft="133,38" />
@@ -774,6 +770,10 @@
           Size="435,211"
           Id="Package\FELC - STA Orders Files"
           TopLeft="134,193" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\SQL - Truncate Table"
+          TopLeft="236,67" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="328,109">
