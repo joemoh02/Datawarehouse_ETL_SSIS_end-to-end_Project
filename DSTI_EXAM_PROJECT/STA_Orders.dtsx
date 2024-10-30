@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="STA_Orders"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{75E58937-0484-4C68-9A8B-9B5E9CB5943E}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{0E63C532-CE1F-4E92-807C-95F8F4777AB5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -719,34 +719,7 @@
           DTS:VariableName="User::FilePath4" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\SQL - Truncate Table"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{30EFC618-2C99-49E7-850C-8A83D933893C}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="SQL - Truncate Table"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{A9ED4E54-AAE6-4934-8B11-9BBFADB27B31}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[Orders]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
-  <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{EE52980B-66E5-4ABD-8909-1082927C1A4C}"
-      DTS:From="Package\SQL - Truncate Table"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\FELC - STA Orders Files" />
-  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -758,7 +731,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="168,42"
           Id="Package\FELC - STA Orders Files\DFT - STA Orders"
@@ -770,44 +743,6 @@
           Size="435,211"
           Id="Package\FELC - STA Orders Files"
           TopLeft="134,193" />
-        <NodeLayout
-          Size="184,42"
-          Id="Package\SQL - Truncate Table"
-          TopLeft="236,67" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="328,109">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="23.5,84"
-              Start="0,0"
-              End="23.5,76.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38"
-                    Point2="0,42"
-                    Point3="4,42" />
-                  <mssgle:LineSegment
-                    End="19.5,42" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,42"
-                    Point2="23.5,42"
-                    Point3="23.5,46" />
-                  <mssgle:LineSegment
-                    End="23.5,76.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>

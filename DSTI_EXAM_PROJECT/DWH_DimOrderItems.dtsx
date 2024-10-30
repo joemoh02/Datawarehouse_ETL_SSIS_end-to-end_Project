@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{2580C189-69B0-4E17-A089-36FEA469FE65}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{BF1C202B-F688-4C92-8219-653D11D38E88}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2231,22 +2231,22 @@ where [refTable].[seller_id] = ?</property>
               name="Aggregate Output 1"
               startId="Package\DFT - DWH DimOrderItems\AGG - group by order_identifier.Outputs[Aggregate Output 1]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output3]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output]"
               endId="Package\DFT - DWH DimOrderItems\OLE_DST - ADM Func reject 2.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DFT - DWH DimOrderItems\DER - functional rejects sellers.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output2]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output1]"
               endId="Package\DFT - DWH DimOrderItems\OLE_DST - ADM Func reject.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DFT - DWH DimOrderItems\DER - Functional Rejects products.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output1]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output2]"
               endId="Package\DFT - DWH DimOrderItems\ALL - sellers.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\DFT - DWH DimOrderItems\DER - seller_key fix.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output3]"
               endId="Package\DFT - DWH DimOrderItems\ALL - products.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\DFT - DWH DimOrderItems\DER - product_key fix.Outputs[Derived Column Output]" />
@@ -2267,31 +2267,31 @@ where [refTable].[seller_id] = ?</property>
               startId="Package\DFT - DWH DimOrderItems\LKP - SellerKey.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DFT - DWH DimOrderItems.Paths[Lookup No Match Output1]"
-              endId="Package\DFT - DWH DimOrderItems\MLT - seller_id.Inputs[Multicast Input 1]"
-              name="Lookup No Match Output"
-              startId="Package\DFT - DWH DimOrderItems\LKP - SellerKey.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Lookup No Match Output]"
               endId="Package\DFT - DWH DimOrderItems\MLT- product_id.Inputs[Multicast Input 1]"
               name="Lookup No Match Output"
               startId="Package\DFT - DWH DimOrderItems\LKP - ProductKey.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 11]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Lookup No Match Output]"
+              endId="Package\DFT - DWH DimOrderItems\MLT - seller_id.Inputs[Multicast Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\DFT - DWH DimOrderItems\LKP - SellerKey.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 1]"
               endId="Package\DFT - DWH DimOrderItems\DER - seller_key fix.Inputs[Derived Column Input]"
               name="Multicast Output 1"
               startId="Package\DFT - DWH DimOrderItems\MLT - seller_id.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 1]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 11]"
               endId="Package\DFT - DWH DimOrderItems\DER - product_key fix.Inputs[Derived Column Input]"
               name="Multicast Output 1"
               startId="Package\DFT - DWH DimOrderItems\MLT- product_id.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 21]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 2]"
               endId="Package\DFT - DWH DimOrderItems\DER - functional rejects sellers.Inputs[Derived Column Input]"
               name="Multicast Output 2"
               startId="Package\DFT - DWH DimOrderItems\MLT - seller_id.Outputs[Multicast Output 2]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 2]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 21]"
               endId="Package\DFT - DWH DimOrderItems\DER - Functional Rejects products.Inputs[Derived Column Input]"
               name="Multicast Output 2"
               startId="Package\DFT - DWH DimOrderItems\MLT- product_id.Outputs[Multicast Output 2]" />
@@ -2301,12 +2301,12 @@ where [refTable].[seller_id] = ?</property>
               name="OLE DB Source Output"
               startId="Package\DFT - DWH DimOrderItems\OLE_SRC - ODS OrderItems.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Union All Output 11]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Union All Output 1]"
               endId="Package\DFT - DWH DimOrderItems\DER - order_identifier.Inputs[Derived Column Input]"
               name="Union All Output 1"
               startId="Package\DFT - DWH DimOrderItems\ALL - sellers.Outputs[Union All Output 1]" />
             <path
-              refId="Package\DFT - DWH DimOrderItems.Paths[Union All Output 1]"
+              refId="Package\DFT - DWH DimOrderItems.Paths[Union All Output 11]"
               endId="Package\DFT - DWH DimOrderItems\LKP - SellerKey.Inputs[Lookup Input]"
               name="Union All Output 1"
               startId="Package\DFT - DWH DimOrderItems\ALL - products.Outputs[Union All Output 1]" />
@@ -2439,7 +2439,7 @@ where [refTable].[seller_id] = ?</property>
           Id="Package\DFT - DWH DimOrderItems\DER - Functional Rejects products"
           TopLeft="730,152" />
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Lookup No Match Output]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Lookup No Match Output1]"
           TopLeft="330,177">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2475,7 +2475,7 @@ where [refTable].[seller_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 1]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 11]"
           TopLeft="537.5,163">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2509,7 +2509,7 @@ where [refTable].[seller_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 2]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 21]"
           TopLeft="617,142">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2567,7 +2567,7 @@ where [refTable].[seller_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output3]"
           TopLeft="488,254">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2605,7 +2605,7 @@ where [refTable].[seller_id] = ?</property>
           Id="Package\DFT - DWH DimOrderItems\LKP - SellerKey"
           TopLeft="178,367" />
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Union All Output 1]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Union All Output 11]"
           TopLeft="252.75,309">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2679,7 +2679,7 @@ where [refTable].[seller_id] = ?</property>
           Id="Package\DFT - DWH DimOrderItems\MLT - seller_id"
           TopLeft="454,362" />
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Lookup No Match Output1]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Lookup No Match Output]"
           TopLeft="335,385.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2703,7 +2703,7 @@ where [refTable].[seller_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 11]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 1]"
           TopLeft="530,404">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2737,7 +2737,7 @@ where [refTable].[seller_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 21]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Multicast Output 2]"
           TopLeft="606,385">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2759,7 +2759,7 @@ where [refTable].[seller_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output1]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output2]"
           TopLeft="419,458">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2801,7 +2801,7 @@ where [refTable].[seller_id] = ?</property>
           Id="Package\DFT - DWH DimOrderItems\OLE_DST - ADM Func reject"
           TopLeft="802,236" />
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output2]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output1]"
           TopLeft="853.5,194">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2839,7 +2839,7 @@ where [refTable].[seller_id] = ?</property>
           Id="Package\DFT - DWH DimOrderItems\OLE_DST - ADM Func reject 2"
           TopLeft="711,446" />
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output3]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Derived Column Output]"
           TopLeft="809.5,408">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2877,7 +2877,7 @@ where [refTable].[seller_id] = ?</property>
           Id="Package\DFT - DWH DimOrderItems\DER - order_identifier"
           TopLeft="135,536" />
         <EdgeLayout
-          Id="Package\DFT - DWH DimOrderItems.Paths[Union All Output 11]"
+          Id="Package\DFT - DWH DimOrderItems.Paths[Union All Output 1]"
           TopLeft="236,500">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2974,6 +2974,42 @@ where [refTable].[seller_id] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH DimOrderItems\LKP - SellerKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimSellers]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH DimOrderItems\OLE_DST - ADM Func reject 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT - DWH DimOrderItems\OLE_SRC - ODS OrderItems">
     <Properties>
       <Property>
@@ -2992,7 +3028,7 @@ where [refTable].[seller_id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3002,30 +3038,7 @@ where [refTable].[seller_id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimOrderItems\LKP - SellerKey">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimSellers]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3047,19 +3060,6 @@ where [refTable].[seller_id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT - DWH DimOrderItems\OLE_DST - ADM Func reject">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimOrderItems\OLE_DST - ADM Func reject 2">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

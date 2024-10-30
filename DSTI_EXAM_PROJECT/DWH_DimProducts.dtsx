@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_DimProducts"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{229BDE42-2E50-413A-B017-396941AD4F4D}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{296809D7-A3B4-4EA0-B8B0-0516E1D7398E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1407,12 +1407,6 @@ where [refTable].[product_id] = ?</property>
                       externalMetadataColumnId="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[product_category_name_english]"
                       lineageId="Package\DFT - DWH DimProducts\ALL - Cat name.Outputs[Union All Output 1].Columns[product_category_name_english]" />
                     <inputColumn
-                      refId="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts.Inputs[OLE DB Destination Input].Columns[seller_key]"
-                      cachedDataType="i4"
-                      cachedName="seller_key"
-                      externalMetadataColumnId="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[seller_key]"
-                      lineageId="Package\DFT - DWH DimProducts\LKP - DimSeller get seller_key.Outputs[Lookup Match Output].Columns[seller_key]" />
-                    <inputColumn
                       refId="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts.Inputs[OLE DB Destination Input].Columns[price]"
                       cachedDataType="numeric"
                       cachedName="price"
@@ -1481,10 +1475,6 @@ where [refTable].[product_id] = ?</property>
                       name="product_width_cm"
                       precision="18"
                       scale="1" />
-                    <externalMetadataColumn
-                      refId="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[seller_key]"
-                      dataType="i4"
-                      name="seller_key" />
                     <externalMetadataColumn
                       refId="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[price]"
                       dataType="numeric"
@@ -2301,7 +2291,7 @@ where [refTable].[product_id] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimProducts\OLE_SRC - ODS Products">
+    design-time-name="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2319,7 +2309,7 @@ where [refTable].[product_id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2329,7 +2319,7 @@ where [refTable].[product_id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2350,48 +2340,12 @@ where [refTable].[product_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimProducts\LKP - products X orderItems">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[OrderItems]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DFT - DWH DimProducts\LKP - DimSeller get seller_key">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2401,10 +2355,46 @@ where [refTable].[product_id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH DimProducts\LKP - products X orderItems">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[OrderItems]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH DimProducts\OLE_SRC - ODS Products">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

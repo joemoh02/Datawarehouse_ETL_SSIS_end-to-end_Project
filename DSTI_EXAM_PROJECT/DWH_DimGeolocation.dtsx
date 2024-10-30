@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_DimGeolocation"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{F788A379-27CE-487B-BF6A-BA953336285E}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{52AFFB8B-7CB0-490C-89E7-0030FDDCE554}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />

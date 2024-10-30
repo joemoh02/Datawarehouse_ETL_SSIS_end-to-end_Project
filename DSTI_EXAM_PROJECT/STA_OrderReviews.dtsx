@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="STA_OrderReviews"
   DTS:PackageType="5"
-  DTS:VersionBuild="78"
-  DTS:VersionGUID="{E40F4EB3-0A12-438D-912F-126F4D0473A9}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{F45BEBA6-1EB4-42CC-9C5D-B0F5FC26B185}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="review_id"
-              DTS:DTSID="{BCD0A7D7-A42D-4387-A20B-E9914DDFC9AC}"
+              DTS:DTSID="{0783A460-FEDF-4861-B57D-780B6927EFFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="order_id"
-              DTS:DTSID="{E6E5CD4B-E932-4CB9-BF99-33887EC3B085}"
+              DTS:DTSID="{9FD99ED4-62EA-49A9-AFCC-BFF708DB92B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="review_score"
-              DTS:DTSID="{791D0FF2-42DB-42A3-99C8-87AB680B7DBF}"
+              DTS:DTSID="{D19D9AD6-B9D1-4EBA-96DB-3A19300DCDEC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="review_comment_title"
-              DTS:DTSID="{2E23B088-97DB-4F6F-AE69-3B651367BC11}"
+              DTS:DTSID="{85AEC772-DF32-4E3E-9D28-BA6CADDA8780}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="review_comment_message"
-              DTS:DTSID="{546F2B6A-C26A-4C7C-9998-DCF022B19C71}"
+              DTS:DTSID="{E76EC19B-F6AC-49F3-9743-3682F2F76A84}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="review_creation_date"
-              DTS:DTSID="{AC1C090C-7610-4914-8E61-A5A9C5CF5D74}"
+              DTS:DTSID="{5C46B7F8-B7D6-43E2-9151-574D8368FE0D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="review_answer_timestamp"
-              DTS:DTSID="{31DFAE54-7B46-431B-8963-7FE5E19CEB09}"
+              DTS:DTSID="{7A9228E2-107A-46B5-8277-EB47D0A346CB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -573,34 +573,7 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\SQL - Truncate Table"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{4E9B59E7-5960-4077-B92B-3574299ADE6D}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="SQL - Truncate Table"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{A9ED4E54-AAE6-4934-8B11-9BBFADB27B31}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[OrderReviews]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
-  <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{64CEEC73-256A-4383-83E2-C106B0643BA2}"
-      DTS:From="Package\SQL - Truncate Table"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\DFT - STA OrderReviews" />
-  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -612,49 +585,11 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="204,42"
           Id="Package\DFT - STA OrderReviews"
           TopLeft="236,177" />
-        <NodeLayout
-          Size="184,42"
-          Id="Package\SQL - Truncate Table"
-          TopLeft="238,73" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="330,115">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8,62"
-              Start="0,0"
-              End="8,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
-                  <mssgle:LineSegment
-                    End="4,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4,31"
-                    Point2="8,31"
-                    Point3="8,35" />
-                  <mssgle:LineSegment
-                    End="8,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -664,13 +599,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="225,42"
-          Id="Package\DFT - STA OrderReviews\FF_SRC - STA OrderReviews"
-          TopLeft="154,76" />
-        <NodeLayout
           Size="177,42"
           Id="Package\DFT - STA OrderReviews\OLE DB Destination"
           TopLeft="178,287" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\DFT - STA OrderReviews\FF_SRC - STA OrderReviews"
+          TopLeft="154,76" />
         <EdgeLayout
           Id="Package\DFT - STA OrderReviews.Paths[Flat File Source Output]"
           TopLeft="230.333333333333,118">

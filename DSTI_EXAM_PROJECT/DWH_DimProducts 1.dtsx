@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_DimProducts"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{20405640-45E1-433F-A8EE-060AEC170A1B}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{BB0B78C9-91A2-4621-A388-3635FD35D501}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2087,7 +2087,30 @@ where [refTable].[product_id] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts">
+    design-time-name="Package\DFT - DWH DimProducts\LKP - products X orderItems">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[OrderItems]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH DimProducts\OLE_SRC - ODS Products">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2123,7 +2146,7 @@ where [refTable].[product_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimProducts\OLE_DST - ADM Functional rejects">
+    design-time-name="Package\DFT - DWH DimProducts\OLE_DST - DWH DimProducts">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2136,30 +2159,7 @@ where [refTable].[product_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimProducts\LKP - products X orderItems">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[OrderItems]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimProducts\OLE_SRC - ODS Products">
+    design-time-name="Package\DFT - DWH DimProducts\OLE_DST - ADM Functional rejects">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
