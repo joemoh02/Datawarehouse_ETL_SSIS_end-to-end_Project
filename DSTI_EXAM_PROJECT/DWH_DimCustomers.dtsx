@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{9F1EFA62-CAE4-4371-AA77-B62D7D27C825}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{F1734045-EC0F-48FF-A64E-B422ED16D739}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -484,7 +484,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geolocation_key" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geolocation_zip_code_prefix" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geolocation_city" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geolocation_state" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geolocation_key" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geolocation_lng" dataType="DT_NUMERIC" length="0" precision="28" scale="8" codePage="0"/&gt;&lt;referenceColumn name="geolocation_lat" dataType="DT_NUMERIC" length="0" precision="28" scale="8" codePage="0"/&gt;&lt;referenceColumn name="geolocation_zip_code_prefix" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geolocation_city" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geolocation_state" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1214,232 +1214,38 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
         <NodeLayout
           Size="220,42"
           Id="Package\DFT - DWH DimCustomers\OLE_SRC - ODS Customers"
-          TopLeft="239,135" />
-        <NodeLayout
-          Size="222,42"
-          Id="Package\DFT - DWH DimCustomers\OLE_DST - ADM FuncReject"
-          TopLeft="946,414" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\DFT - DWH DimCustomers\DER - Functional Rejects"
-          TopLeft="916,305" />
-        <NodeLayout
-          Size="181,42"
-          Id="Package\DFT - DWH DimCustomers\DER - No geoloc key"
-          TopLeft="634,342" />
-        <NodeLayout
-          Size="206,42"
-          Id="Package\DFT - DWH DimCustomers\LKP - Retrieve geoloc key"
-          TopLeft="244,251" />
-        <NodeLayout
-          Size="241,42"
-          Id="Package\DFT - DWH DimCustomers\OLE_DST - DWH DimCustomers"
-          TopLeft="237,438" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DFT - DWH DimCustomers\ALL - Geoloc key"
-          TopLeft="281,340" />
-        <EdgeLayout
-          Id="Package\DFT - DWH DimCustomers.Paths[Union All Output 1]"
-          TopLeft="360,382">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56"
-              Start="0,0"
-              End="0,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - DWH DimCustomers.Paths[OLE DB Source Output]"
-          TopLeft="348,177">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74"
-              Start="0,0"
-              End="0,66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - DWH DimCustomers.Paths[Lookup Match Output]"
-          TopLeft="347,293">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10.3333333333333,47"
-              Start="0,0"
-              End="-10.3333333333333,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.9258809234508" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.9258809234508"
-                    Point2="0,27.9258809234508"
-                    Point3="-4,27.9258809234508" />
-                  <mssgle:LineSegment
-                    End="-6.33333333333331,27.9258809234508" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.33333333333331,27.9258809234508"
-                    Point2="-10.3333333333333,27.9258809234508"
-                    Point3="-10.3333333333333,31.9258809234508" />
-                  <mssgle:LineSegment
-                    End="-10.3333333333333,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-53.3580533854167,32.9258809234508,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - DWH DimCustomers.Paths[Derived Column Output]"
-          TopLeft="1017,347">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="40,67"
-              Start="0,0"
-              End="40,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.5"
-                    Point2="0,33.5"
-                    Point3="4,33.5" />
-                  <mssgle:LineSegment
-                    End="36,33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="36,33.5"
-                    Point2="40,33.5"
-                    Point3="40,37.5" />
-                  <mssgle:LineSegment
-                    End="40,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="248,66" />
         <NodeLayout
           Size="229,42"
           Id="Package\DFT - DWH DimCustomers\MLT - customer zip code prefix"
-          TopLeft="519,244" />
-        <EdgeLayout
-          Id="Package\DFT - DWH DimCustomers.Paths[Lookup No Match Output]"
-          TopLeft="450,268.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="69,0"
-              Start="0,0"
-              End="61.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="61.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.05638671875,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - DWH DimCustomers.Paths[Multicast Output 1]"
-          TopLeft="633.5,286">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="91,56"
-              Start="0,0"
-              End="91,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="4,28" />
-                  <mssgle:LineSegment
-                    End="87,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="87,28"
-                    Point2="91,28"
-                    Point3="91,32" />
-                  <mssgle:LineSegment
-                    End="91,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - DWH DimCustomers.Paths[Derived Column Output1]"
-          TopLeft="634,362">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-190,0"
-              Start="0,0"
-              End="-182.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-182.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="528,301" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\DFT - DWH DimCustomers\DER - Functional Rejects"
+          TopLeft="925,362" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\DFT - DWH DimCustomers\DER - No geoloc key"
+          TopLeft="624,398" />
+        <NodeLayout
+          Size="241,42"
+          Id="Package\DFT - DWH DimCustomers\OLE_DST - DWH DimCustomers"
+          TopLeft="251,595" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\DFT - DWH DimCustomers\LKP - Retrieve geoloc key"
+          TopLeft="253,308" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DFT - DWH DimCustomers\ALL - Geoloc key"
+          TopLeft="271,403" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\DFT - DWH DimCustomers\OLE_DST - ADM FuncReject"
+          TopLeft="955,471" />
         <EdgeLayout
           Id="Package\DFT - DWH DimCustomers.Paths[Multicast Output 2]"
-          TopLeft="748,270.666666666667">
+          TopLeft="757,327.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1471,6 +1277,200 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimCustomers.Paths[Multicast Output 1]"
+          TopLeft="642.5,343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72,55"
+              Start="0,0"
+              End="72,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
+                  <mssgle:LineSegment
+                    End="68,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68,27.5"
+                    Point2="72,27.5"
+                    Point3="72,31.5" />
+                  <mssgle:LineSegment
+                    End="72,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimCustomers.Paths[Lookup No Match Output]"
+          TopLeft="459,325.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69,0"
+              Start="0,0"
+              End="61.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="61.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.05638671875,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimCustomers.Paths[Lookup Match Output]"
+          TopLeft="354.25,350">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,16.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimCustomers.Paths[Derived Column Output1]"
+          TopLeft="624,421.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-190,0"
+              Start="0,0"
+              End="-182.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-182.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimCustomers.Paths[Derived Column Output]"
+          TopLeft="1026,404">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,67"
+              Start="0,0"
+              End="40,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="4,33.5" />
+                  <mssgle:LineSegment
+                    End="36,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36,33.5"
+                    Point2="40,33.5"
+                    Point3="40,37.5" />
+                  <mssgle:LineSegment
+                    End="40,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimCustomers.Paths[OLE DB Source Output]"
+          TopLeft="357,108">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,200"
+              Start="0,0"
+              End="0,192.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,192.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimCustomers.Paths[Union All Output 1]"
+          TopLeft="352.5,445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,150"
+              Start="0,0"
+              End="19,142.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71"
+                    Point2="0,75"
+                    Point3="4,75" />
+                  <mssgle:LineSegment
+                    End="15,75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15,75"
+                    Point2="19,75"
+                    Point3="19,79" />
+                  <mssgle:LineSegment
+                    End="19,142.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1488,7 +1488,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimCustomers\OLE_DST - ADM FuncReject">
+    design-time-name="Package\DFT - DWH DimCustomers\OLE_DST - DWH DimCustomers">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1506,7 +1506,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1516,7 +1516,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1524,7 +1524,7 @@ where [refTable].[geolocation_zip_code_prefix] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - DWH DimCustomers\OLE_DST - DWH DimCustomers">
+    design-time-name="Package\DFT - DWH DimCustomers\OLE_DST - ADM FuncReject">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

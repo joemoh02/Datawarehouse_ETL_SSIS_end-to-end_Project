@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DWH_DimGeolocation"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{52AFFB8B-7CB0-490C-89E7-0030FDDCE554}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{E45D1301-9C47-429A-BE0D-F237577B9CDE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -85,6 +85,20 @@
                       cachedLength="50"
                       cachedName="geolocation_state"
                       lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_state]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Inputs[Aggregate Input 1].Columns[geolocation_lng]"
+                      cachedDataType="numeric"
+                      cachedName="geolocation_lng"
+                      cachedPrecision="28"
+                      cachedScale="20"
+                      lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lng]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Inputs[Aggregate Input 1].Columns[geolocation_lat]"
+                      cachedDataType="numeric"
+                      cachedName="geolocation_lat"
+                      cachedPrecision="28"
+                      cachedScale="20"
+                      lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lat]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -186,6 +200,251 @@
                           name="AggregationComparisonFlags">0</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lng]"
+                      dataType="numeric"
+                      lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lng]"
+                      name="geolocation_lng"
+                      precision="28"
+                      scale="20">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lng]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lat]"
+                      dataType="numeric"
+                      lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lat]"
+                      name="geolocation_lat"
+                      precision="28"
+                      scale="20">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lat]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - rescale lng lat"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input].Columns[geolocation_zip_code_prefix]"
+                      cachedDataType="i8"
+                      cachedName="geolocation_zip_code_prefix"
+                      lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_zip_code_prefix]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input].Columns[geolocation_city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="geolocation_city"
+                      lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_city]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input].Columns[geolocation_state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="geolocation_state"
+                      lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_state]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input].Columns[geolocation_lng]"
+                      cachedDataType="numeric"
+                      cachedName="geolocation_lng"
+                      cachedPrecision="28"
+                      cachedScale="20"
+                      lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lng]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input].Columns[geolocation_lat]"
+                      cachedDataType="numeric"
+                      cachedName="geolocation_lat"
+                      cachedPrecision="28"
+                      cachedScale="20"
+                      lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lat]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lng]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lng]"
+                      name="Copy of geolocation_lng"
+                      precision="28"
+                      scale="8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lng]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lat]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lat]"
+                      name="Copy of geolocation_lat"
+                      precision="28"
+                      scale="8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_lat]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_zip_code_prefix]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_zip_code_prefix]"
+                      name="Copy of geolocation_zip_code_prefix"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_zip_code_prefix]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_city]"
+                      name="Copy of geolocation_city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_city]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_state]"
+                      name="Copy of geolocation_state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_state]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -359,6 +618,22 @@
                       cachedName="geolocation_state"
                       externalMetadataColumnId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_state]"
                       lineageId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1].Columns[geolocation_state]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].Columns[Copy of geolocation_lng]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of geolocation_lng"
+                      cachedPrecision="28"
+                      cachedScale="8"
+                      externalMetadataColumnId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lng]"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lng]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].Columns[Copy of geolocation_lat]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of geolocation_lat"
+                      cachedPrecision="28"
+                      cachedScale="8"
+                      externalMetadataColumnId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lat]"
+                      lineageId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lat]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -381,6 +656,18 @@
                       refId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_key]"
                       dataType="i4"
                       name="geolocation_key" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lng]"
+                      dataType="numeric"
+                      name="geolocation_lng"
+                      precision="28"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lat]"
+                      dataType="numeric"
+                      name="geolocation_lat"
+                      precision="28"
+                      scale="8" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -500,6 +787,28 @@
                       lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_state]"
                       name="geolocation_state"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lng]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].ExternalColumns[geolocation_lng]"
+                      lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lng]"
+                      name="geolocation_lng"
+                      precision="28"
+                      scale="20"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lat]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].ExternalColumns[geolocation_lat]"
+                      lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_lat]"
+                      name="geolocation_lat"
+                      precision="28"
+                      scale="20"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -567,6 +876,20 @@
                       lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Error Output].Columns[geolocation_lng]"
+                      dataType="numeric"
+                      lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Error Output].Columns[geolocation_lng]"
+                      name="geolocation_lng"
+                      precision="28"
+                      scale="20" />
+                    <outputColumn
+                      refId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Error Output].Columns[geolocation_lat]"
+                      dataType="numeric"
+                      lineageId="Package\DFT - DWH DimGeolocation\OLE_SRC - ODS Geolocation.Outputs[OLE DB Source Error Output].Columns[geolocation_lat]"
+                      name="geolocation_lat"
+                      precision="28"
+                      scale="20" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -580,8 +903,13 @@
               name="Aggregate Output 1"
               startId="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix.Outputs[Aggregate Output 1]" />
             <path
-              refId="Package\DFT - DWH DimGeolocation.Paths[Derived Column Output]"
+              refId="Package\DFT - DWH DimGeolocation.Paths[Data Conversion Output]"
               endId="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - DWH DimGeolocation.Paths[Derived Column Output]"
+              endId="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\DFT - DWH DimGeolocation\DER - Replace city special characters.Outputs[Derived Column Output]" />
             <path
@@ -670,11 +998,11 @@
     design-time-name="Package\DFT - DWH DimGeolocation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="246,42"
           Id="Package\DFT - DWH DimGeolocation\OLE_DST - DWH DimGeolocation"
-          TopLeft="198,339" />
+          TopLeft="187,446" />
         <NodeLayout
           Size="263,42"
           Id="Package\DFT - DWH DimGeolocation\DER - Replace city special characters"
@@ -687,40 +1015,6 @@
           Size="245,42"
           Id="Package\DFT - DWH DimGeolocation\AGG - Geolocation zip code prefix"
           TopLeft="194,176" />
-        <EdgeLayout
-          Id="Package\DFT - DWH DimGeolocation.Paths[Derived Column Output]"
-          TopLeft="351.5,297">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-30.5,42"
-              Start="0,0"
-              End="-30.5,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="-4,21" />
-                  <mssgle:LineSegment
-                    End="-26.5,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.5,21"
-                    Point2="-30.5,21"
-                    Point3="-30.5,25" />
-                  <mssgle:LineSegment
-                    End="-30.5,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - DWH DimGeolocation.Paths[Aggregate Output 1]"
           TopLeft="316.5,218">
@@ -769,6 +1063,78 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="187,42"
+          Id="Package\DFT - DWH DimGeolocation\DCNV - rescale lng lat"
+          TopLeft="228,348" />
+        <EdgeLayout
+          Id="Package\DFT - DWH DimGeolocation.Paths[Derived Column Output]"
+          TopLeft="351.5,297">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-30,51"
+              Start="0,0"
+              End="-30,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5"
+                    Point2="0,25.5"
+                    Point3="-4,25.5" />
+                  <mssgle:LineSegment
+                    End="-26,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26,25.5"
+                    Point2="-30,25.5"
+                    Point3="-30,29.5" />
+                  <mssgle:LineSegment
+                    End="-30,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH DimGeolocation.Paths[Data Conversion Output]"
+          TopLeft="321.5,390">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.5,56"
+              Start="0,0"
+              End="-11.5,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="-4,28" />
+                  <mssgle:LineSegment
+                    End="-7.5,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.5,28"
+                    Point2="-11.5,28"
+                    Point3="-11.5,32" />
+                  <mssgle:LineSegment
+                    End="-11.5,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

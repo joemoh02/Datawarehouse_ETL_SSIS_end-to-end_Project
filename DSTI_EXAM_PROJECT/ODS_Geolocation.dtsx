@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{C58DC40B-7F51-4D6C-9B78-1E7DFA86C341}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{7BAE4ABF-5B87-4408-A7C9-50866846728F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -987,6 +987,110 @@
               </outputs>
             </component>
             <component
+              refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - rescale lng lat"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input].Columns[geolocation_lng_float]"
+                      cachedDataType="decimal"
+                      cachedName="geolocation_lng_float"
+                      cachedScale="20"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT.Outputs[Data Conversion Output].Columns[geolocation_lng_float]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input].Columns[geolocation_lat_float]"
+                      cachedDataType="decimal"
+                      cachedName="geolocation_lat_float"
+                      cachedScale="20"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - latitutde to FLOAT.Outputs[Data Conversion Output].Columns[geolocation_lat_float]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lng_float]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lng_float]"
+                      name="Copy of geolocation_lng_float"
+                      scale="8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT.Outputs[Data Conversion Output].Columns[geolocation_lng_float]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lat_float]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lat_float]"
+                      name="Copy of geolocation_lat_float"
+                      scale="8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Geolocation\DCNV - latitutde to FLOAT.Outputs[Data Conversion Output].Columns[geolocation_lat_float]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DFT - ODS Geolocation\DCNV - Resize state"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1433,6 +1537,87 @@
                       refId="Package\DFT - ODS Geolocation\DER - longitude rejects.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\DFT - ODS Geolocation\DER - longitude rejects.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Geolocation\DER - Replace city special characters"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DER - Replace city special characters"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Inputs[Derived Column Input].Columns[geolocation_city]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="geolocation_city"
+                      lineageId="Package\DFT - ODS Geolocation\OLE_SRC - STA Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_city]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Inputs[Derived Column Input].Columns[geolocation_city_unicode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="geolocation_city_unicode"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - City to unicode.Outputs[Data Conversion Output].Columns[geolocation_city_unicode]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE](#{Package\DFT - ODS Geolocation\OLE_SRC - STA Geolocation.Outputs[OLE DB Source Output].Columns[geolocation_city]},"á","a"),"é","e"),"í","i"),"ó","o"),"ú","u"),"â","a"),"ê","e"),"ô","o"),"ã","a"),"õ","o"),"à","a"),"ç","c")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(geolocation_city,"á","a"),"é","e"),"í","i"),"ó","o"),"ú","u"),"â","a"),"ê","e"),"ô","o"),"ã","a"),"õ","o"),"à","a"),"ç","c")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1967,20 +2152,6 @@
                       externalMetadataColumnId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_zip_code_prefix]"
                       lineageId="Package\DFT - ODS Geolocation\DCNV - zip code to INT.Outputs[Data Conversion Output].Columns[geolocation_zip_code_prefix_INT]" />
                     <inputColumn
-                      refId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].Columns[geolocation_lng_float]"
-                      cachedDataType="decimal"
-                      cachedName="geolocation_lng_float"
-                      cachedScale="20"
-                      externalMetadataColumnId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lng]"
-                      lineageId="Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT.Outputs[Data Conversion Output].Columns[geolocation_lng_float]" />
-                    <inputColumn
-                      refId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].Columns[geolocation_lat_float]"
-                      cachedDataType="decimal"
-                      cachedName="geolocation_lat_float"
-                      cachedScale="20"
-                      externalMetadataColumnId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lat]"
-                      lineageId="Package\DFT - ODS Geolocation\DCNV - latitutde to FLOAT.Outputs[Data Conversion Output].Columns[geolocation_lat_float]" />
-                    <inputColumn
                       refId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].Columns[geolocation_state_r]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1995,6 +2166,20 @@
                       cachedName="geolocation_city_unicode"
                       externalMetadataColumnId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_city]"
                       lineageId="Package\DFT - ODS Geolocation\DCNV - City to unicode.Outputs[Data Conversion Output].Columns[geolocation_city_unicode]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].Columns[Copy of geolocation_lng_float]"
+                      cachedDataType="decimal"
+                      cachedName="Copy of geolocation_lng_float"
+                      cachedScale="8"
+                      externalMetadataColumnId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lng]"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lng_float]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].Columns[Copy of geolocation_lat_float]"
+                      cachedDataType="decimal"
+                      cachedName="Copy of geolocation_lat_float"
+                      cachedScale="8"
+                      externalMetadataColumnId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input].ExternalColumns[geolocation_lat]"
+                      lineageId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output].Columns[Copy of geolocation_lat_float]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2269,35 +2454,35 @@
               name="Data Conversion Error Output"
               startId="Package\DFT - ODS Geolocation\DCNV - City to unicode.Outputs[Data Conversion Error Output]" />
             <path
-              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output]"
-              endId="Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT.Inputs[Data Conversion Input]"
+              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output4]"
+              endId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\DFT - ODS Geolocation\DCNV - zip code to INT.Outputs[Data Conversion Output]" />
+              startId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output3]"
+              endId="Package\DFT - ODS Geolocation\DCNV - Resize state.Inputs[Data Conversion Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - ODS Geolocation\DCNV - City to unicode.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output5]"
+              endId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT - ODS Geolocation\DCNV - Resize state.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output1]"
               endId="Package\DFT - ODS Geolocation\DCNV - latitutde to FLOAT.Inputs[Data Conversion Input]"
               name="Data Conversion Output"
               startId="Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output2]"
-              endId="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation.Inputs[OLE DB Destination Input]"
+              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output]"
+              endId="Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT.Inputs[Data Conversion Input]"
               name="Data Conversion Output"
-              startId="Package\DFT - ODS Geolocation\DCNV - Resize state.Outputs[Data Conversion Output]" />
+              startId="Package\DFT - ODS Geolocation\DCNV - zip code to INT.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output3]"
+              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output2]"
               endId="Package\DFT - ODS Geolocation\DCNV - City to unicode.Inputs[Data Conversion Input]"
               name="Data Conversion Output"
               startId="Package\DFT - ODS Geolocation\DCNV - latitutde to FLOAT.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\DFT - ODS Geolocation.Paths[Data Conversion Output4]"
-              endId="Package\DFT - ODS Geolocation\DCNV - Resize state.Inputs[Data Conversion Input]"
-              name="Data Conversion Output"
-              startId="Package\DFT - ODS Geolocation\DCNV - City to unicode.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\DFT - ODS Geolocation.Paths[Derived Column Output]"
-              endId="Package\DFT - ODS Geolocation\ALL - rejects.Inputs[Union All Input 1]"
-              name="Derived Column Output"
-              startId="Package\DFT - ODS Geolocation\DER - Zip code rejects.Outputs[Derived Column Output]" />
             <path
               refId="Package\DFT - ODS Geolocation.Paths[Derived Column Output1]"
               endId="Package\DFT - ODS Geolocation\ALL - rejects.Inputs[Union All Input 2]"
@@ -2313,6 +2498,16 @@
               endId="Package\DFT - ODS Geolocation\ALL - rejects.Inputs[Union All Input 4]"
               name="Derived Column Output"
               startId="Package\DFT - ODS Geolocation\DER - Unicode city rejects.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - ODS Geolocation.Paths[Derived Column Output4]"
+              endId="Package\DFT - ODS Geolocation\DCNV - rescale lng lat.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\DFT - ODS Geolocation\DER - Replace city special characters.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT - ODS Geolocation.Paths[Derived Column Output]"
+              endId="Package\DFT - ODS Geolocation\ALL - rejects.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT - ODS Geolocation\DER - Zip code rejects.Outputs[Derived Column Output]" />
             <path
               refId="Package\DFT - ODS Geolocation.Paths[OLE DB Source Output]"
               endId="Package\DFT - ODS Geolocation\DCNV - zip code to INT.Inputs[Data Conversion Input]"
@@ -2406,29 +2601,91 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="223,42"
-          Id="Package\DFT - ODS Geolocation\OLE_SRC - STA Geolocation"
-          TopLeft="128,47" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\DFT - ODS Geolocation\DCNV - zip code to INT"
-          TopLeft="145,144" />
-        <NodeLayout
-          Size="215,42"
-          Id="Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT"
-          TopLeft="139,221" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\DFT - ODS Geolocation\DCNV - latitutde to FLOAT"
-          TopLeft="137,295" />
+          Size="192,42"
+          Id="Package\DFT - ODS Geolocation\DCNV - City to unicode"
+          TopLeft="145,371" />
         <NodeLayout
           Size="189,42"
           Id="Package\DFT - ODS Geolocation\DER - Zip code rejects"
           TopLeft="459,135" />
         <NodeLayout
+          Size="192,42"
+          Id="Package\DFT - ODS Geolocation\DER - longitude rejects"
+          TopLeft="462,218" />
+        <NodeLayout
           Size="180,42"
           Id="Package\DFT - ODS Geolocation\DCNV - Resize state"
-          TopLeft="158,551" />
+          TopLeft="147,459" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\DFT - ODS Geolocation\DCNV - longitude to FLOAT"
+          TopLeft="139,221" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DFT - ODS Geolocation\OLE_DST - ADM Rejects"
+          TopLeft="898,229" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\DFT - ODS Geolocation\DER - Unicode city rejects"
+          TopLeft="591,375" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\DFT - ODS Geolocation\DER - latitude rejects"
+          TopLeft="468,300" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\DFT - ODS Geolocation\DCNV - zip code to INT"
+          TopLeft="145,144" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\DFT - ODS Geolocation\DCNV - latitutde to FLOAT"
+          TopLeft="137,295" />
+        <NodeLayout
+          Size="223,42"
+          Id="Package\DFT - ODS Geolocation\OLE_SRC - STA Geolocation"
+          TopLeft="128,47" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\DFT - ODS Geolocation\ALL - rejects"
+          TopLeft="726,214" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation"
+          TopLeft="114,755" />
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Union All Output 1]"
+          TopLeft="867,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31,15"
+              Start="0,0"
+              End="23.5,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="11.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,0"
+                    Point2="15.5,0"
+                    Point3="15.5,4" />
+                  <mssgle:LineSegment
+                    End="15.5,11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,11"
+                    Point2="15.5,15"
+                    Point3="19.5,15" />
+                  <mssgle:LineSegment
+                    End="23.5,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Geolocation.Paths[OLE DB Source Output]"
           TopLeft="240.5,89">
@@ -2443,320 +2700,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output]"
-          TopLeft="244,186">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output]"
-          TopLeft="338,165">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="121,-9"
-              Start="0,0"
-              End="113.5,-9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="56.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="56.5,0"
-                    Point2="60.5,0"
-                    Point3="60.5,-4" />
-                  <mssgle:LineSegment
-                    End="60.5,-5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="60.5,-5"
-                    Point2="60.5,-9"
-                    Point3="64.5,-9" />
-                  <mssgle:LineSegment
-                    End="113.5,-9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-5.58638671874999,1,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="192,42"
-          Id="Package\DFT - ODS Geolocation\DER - longitude rejects"
-          TopLeft="462,218" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output1]"
-          TopLeft="244,263">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output1]"
-          TopLeft="354,240.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="108,0"
-              Start="0,0"
-              End="100.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="100.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-15.83638671875,5,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="183,42"
-          Id="Package\DFT - ODS Geolocation\DER - latitude rejects"
-          TopLeft="468,300" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output2]"
-          TopLeft="346,318.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="122,0"
-              Start="0,0"
-              End="114.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="114.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8.83638671874999,5,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="224,42"
-          Id="Package\DFT - ODS Geolocation\OLE_DST - ODS Geolocation"
-          TopLeft="129,638" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output2]"
-          TopLeft="244.5,593">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45"
-              Start="0,0"
-              End="0,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="203,42"
-          Id="Package\DFT - ODS Geolocation\OLE_DST - ADM Rejects"
-          TopLeft="898,229" />
-        <NodeLayout
-          Size="192,42"
-          Id="Package\DFT - ODS Geolocation\DCNV - City to unicode"
-          TopLeft="145,371" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output3]"
-          TopLeft="241.25,337">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="207,42"
-          Id="Package\DFT - ODS Geolocation\DER - Unicode city rejects"
-          TopLeft="591,375" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output3]"
-          TopLeft="337,394">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="254,0"
-              Start="0,0"
-              End="246.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="246.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="57.16361328125,5,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="141,42"
-          Id="Package\DFT - ODS Geolocation\ALL - rejects"
-          TopLeft="726,214" />
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Derived Column Output]"
-          TopLeft="553.5,177">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="243,37"
-              Start="0,0"
-              End="243,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5"
-                    Point2="0,18.5"
-                    Point3="4,18.5" />
-                  <mssgle:LineSegment
-                    End="239,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="239,18.5"
-                    Point2="243,18.5"
-                    Point3="243,22.5" />
-                  <mssgle:LineSegment
-                    End="243,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Derived Column Output1]"
-          TopLeft="654,237">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="72,0"
-              Start="0,0"
-              End="64.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="64.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Derived Column Output2]"
-          TopLeft="559.5,300">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="214.833333333333,-44"
-              Start="0,0"
-              End="214.833333333333,-36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-22.1037868162693" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-22.1037868162693"
-                    Point2="0,-26.1037868162693"
-                    Point3="4,-26.1037868162693" />
-                  <mssgle:LineSegment
-                    End="210.833333333333,-26.1037868162693" />
-                  <mssgle:CubicBezierSegment
-                    Point1="210.833333333333,-26.1037868162693"
-                    Point2="214.833333333333,-26.1037868162693"
-                    Point3="214.833333333333,-30.1037868162693" />
-                  <mssgle:LineSegment
-                    End="214.833333333333,-36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2800,31 +2743,325 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT - ODS Geolocation.Paths[Union All Output 1]"
-          TopLeft="867,235">
+          Id="Package\DFT - ODS Geolocation.Paths[Derived Column Output2]"
+          TopLeft="559.5,300">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31,15"
+              EndConnector="214.833333333333,-44"
               Start="0,0"
-              End="23.5,15">
+              End="214.833333333333,-36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="11.5,0" />
+                    End="0,-22.1037868162693" />
                   <mssgle:CubicBezierSegment
-                    Point1="11.5,0"
-                    Point2="15.5,0"
-                    Point3="15.5,4" />
+                    Point1="0,-22.1037868162693"
+                    Point2="0,-26.1037868162693"
+                    Point3="4,-26.1037868162693" />
                   <mssgle:LineSegment
-                    End="15.5,11" />
+                    End="210.833333333333,-26.1037868162693" />
                   <mssgle:CubicBezierSegment
-                    Point1="15.5,11"
-                    Point2="15.5,15"
-                    Point3="19.5,15" />
+                    Point1="210.833333333333,-26.1037868162693"
+                    Point2="214.833333333333,-26.1037868162693"
+                    Point3="214.833333333333,-30.1037868162693" />
                   <mssgle:LineSegment
-                    End="23.5,15" />
+                    End="214.833333333333,-36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Derived Column Output1]"
+          TopLeft="654,237">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72,0"
+              Start="0,0"
+              End="64.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Derived Column Output]"
+          TopLeft="553.5,177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="243,37"
+              Start="0,0"
+              End="243,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="239,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="239,18.5"
+                    Point2="243,18.5"
+                    Point3="243,22.5" />
+                  <mssgle:LineSegment
+                    End="243,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output3]"
+          TopLeft="239,413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output2]"
+          TopLeft="241.25,337">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output1]"
+          TopLeft="244,263">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output]"
+          TopLeft="244,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output3]"
+          TopLeft="337,394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="254,0"
+              Start="0,0"
+              End="246.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="246.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="57.16361328125,5,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output2]"
+          TopLeft="346,318.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122,0"
+              Start="0,0"
+              End="114.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="114.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.83638671874999,5,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output1]"
+          TopLeft="354,240.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108,0"
+              Start="0,0"
+              End="100.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.83638671875,5,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Error Output]"
+          TopLeft="338,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121,-9"
+              Start="0,0"
+              End="113.5,-9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.5,0"
+                    Point2="60.5,0"
+                    Point3="60.5,-4" />
+                  <mssgle:LineSegment
+                    End="60.5,-5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60.5,-5"
+                    Point2="60.5,-9"
+                    Point3="64.5,-9" />
+                  <mssgle:LineSegment
+                    End="113.5,-9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-5.58638671874999,1,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="263,42"
+          Id="Package\DFT - ODS Geolocation\DER - Replace city special characters"
+          TopLeft="74,596" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\DFT - ODS Geolocation\DCNV - rescale lng lat"
+          TopLeft="130,672" />
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Derived Column Output4]"
+          TopLeft="205.5,638">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18,34"
+              Start="0,0"
+              End="18,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="14,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14,17"
+                    Point2="18,17"
+                    Point3="18,21" />
+                  <mssgle:LineSegment
+                    End="18,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2835,18 +3072,52 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output4]"
-          TopLeft="244.5,413">
+          TopLeft="224.75,714">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,138"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,130.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,130.5" />
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Geolocation.Paths[Data Conversion Output5]"
+          TopLeft="237,501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31.5,95"
+              Start="0,0"
+              End="-31.5,87.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.5"
+                    Point2="0,47.5"
+                    Point3="-4,47.5" />
+                  <mssgle:LineSegment
+                    End="-27.5,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27.5,47.5"
+                    Point2="-31.5,47.5"
+                    Point3="-31.5,51.5" />
+                  <mssgle:LineSegment
+                    End="-31.5,87.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
